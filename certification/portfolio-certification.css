@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body{
+    font-family: 'Montserrat';
+    width: 100%;
+    margin: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    position: fixed;
+    width: 80%;
+    z-index: 100;
+    left: 10%;
+}
+
+#nav-bar{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    box-shadow: 0 2px 20px 12px rgba(10,0,5,1);
+    z-index: 2;
+    position: relative;
+    left: 0%;
+}
+
+
+li{
+    width: 20%;
+    float: left;
+    display: inline;
+    text-align: center;
+}
+
+li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 20px 35px 20px 35px;
+    font-size: 150%;
+    color: white;
+}
+
+li a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+#gr{
+    --size: 700px;
+    --speed: 50s;
+    --easing: cubic-bezier(1, 0.8, 0.2, 0.8);
+    width: 80%;
+    height: 50%;
+    filter: blur(calc(var(--size) / 8));
+    background-image: linear-gradient(rgba(55, 235, 169, 0.85), #5b37eb);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 100% 100% 100% 100%/100% 100% 100% 100%;
+    margin: auto;
+    z-index: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 25%;
+}
+
+@media (max-width: 1000px){
+    #gr{
+        --size: 500px
+    }
+}
